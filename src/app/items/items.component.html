@@ -1,5 +1,9 @@
-<ul *ngIf="items$ | async as items">
-  <li *ngFor="let item of items">
-    {{item.name}}
-  </li>
-</ul>
+<div class="container">
+  <div class="col-50">
+    <app-item-list [items]="items$ | async" (deleted)="delete($event)" (selected)="select($event)"></app-item-list>
+  </div>
+
+  <div class="col-50">
+    <app-item-details [item]="selected" (saved)="save($event)" (cancelled)="cancel()"></app-item-details>
+  </div>
+</div>

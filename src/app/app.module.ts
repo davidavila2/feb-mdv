@@ -8,6 +8,9 @@ import { ItemsComponent } from './items/items.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
 import { ItemDetailsComponent } from './items/item-details/item-details.component';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './material/material.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CommonModule } from '@angular/common';
     BrowserModule,
     CommonModule,
     HttpClientModule,
+    MaterialModule,
+    FormsModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]
