@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Item } from './item';
 
-const BASE_URL = process.env.BASE_URL;
+const BASE_URL = 'https://server-30-x-30.herokuapp.com/items';
 
 @Injectable({
   providedIn: 'root'

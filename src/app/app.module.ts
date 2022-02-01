@@ -7,6 +7,7 @@ import { ItemsService } from './service/items.service';
 import { ItemsComponent } from './items/items.component';
 import { ItemListComponent } from './items/item-list/item-list.component';
 import { ItemDetailsComponent } from './items/item-details/item-details.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -16,8 +17,10 @@ import { ItemDetailsComponent } from './items/item-details/item-details.componen
     ItemDetailsComponent
   ],
   imports: [
+    BrowserModule,
+    CommonModule,
+    HttpClientModule,
     AppRoutingModule,
-    HttpClientModule
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]

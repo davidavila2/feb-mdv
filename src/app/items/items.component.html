@@ -1,1 +1,5 @@
-<p>items works!</p>
+<ul *ngIf="items$ | async as items">
+  <li *ngFor="let item of items">
+    {{item.name}}
+  </li>
+</ul>
